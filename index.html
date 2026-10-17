@@ -1,1 +1,786 @@
-Hi, this welcome to my portfolio
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Shoaib Ul Hassan | AI Researcher, Educator &amp; Developer</title>
+<meta content="Shoaib Ul Hassan — AI researcher, graduate research fellow, educator and software developer. Explore research interests, all seven listed publications, professional experience and projects." name="description"/>
+<meta content="Shoaib Ul Hassan" name="author"/>
+<meta content="#07111f" name="theme-color"/>
+<meta content="Shoaib Ul Hassan | AI &amp; Machine Learning Researcher" property="og:title"/>
+<meta content="Research portfolio spanning AI/ML, deep learning, DAS, signal processing, and scientific machine learning." property="og:description"/>
+<meta content="website" property="og:type"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+    :root {
+      --bg: #07111f;
+      --bg-soft: #0b1728;
+      --panel: rgba(255,255,255,.055);
+      --panel-strong: rgba(255,255,255,.085);
+      --text: #f4f7fb;
+      --muted: #9fb0c3;
+      --line: rgba(255,255,255,.12);
+      --accent: #59d4c7;
+      --accent-2: #7aa7ff;
+      --accent-soft: rgba(89,212,199,.12);
+      --shadow: 0 24px 70px rgba(0,0,0,.28);
+      --radius: 24px;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 12% 12%, rgba(122,167,255,.12), transparent 28rem),
+        radial-gradient(circle at 88% 18%, rgba(89,212,199,.11), transparent 26rem),
+        linear-gradient(180deg, #07111f 0%, #081321 48%, #06101b 100%);
+      font-family: "DM Sans", system-ui, sans-serif;
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    ::selection { background: rgba(89,212,199,.28); }
+
+    .container {
+      width: min(calc(100% - 40px), var(--max));
+      margin: 0 auto;
+    }
+
+    .nav-wrap {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(7,17,31,.72);
+      border-bottom: 1px solid rgba(255,255,255,.07);
+      backdrop-filter: blur(16px);
+    }
+
+    nav {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 700;
+      letter-spacing: -.03em;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 24px rgba(89,212,199,.65);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      color: var(--muted);
+      font-size: .92rem;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover { color: var(--text); }
+
+    .nav-cta,
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      min-height: 46px;
+      padding: 0 19px;
+      font-weight: 700;
+      transition: .22s ease;
+      cursor: pointer;
+    }
+
+    .nav-cta {
+      min-height: 38px;
+      padding: 0 15px;
+      color: #06101b;
+      background: var(--accent);
+    }
+
+    .button-primary {
+      color: #06101b;
+      background: linear-gradient(135deg, var(--accent), #7ce4d8);
+      box-shadow: 0 12px 34px rgba(89,212,199,.15);
+    }
+
+    .button-secondary {
+      color: var(--text);
+      border-color: var(--line);
+      background: rgba(255,255,255,.035);
+    }
+
+    .button:hover,
+    .nav-cta:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.04);
+    }
+
+    .hero {
+      position: relative;
+      min-height: calc(100vh - 74px);
+      display: grid;
+      align-items: center;
+      padding: 90px 0 76px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 68px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #b9c6d6;
+      font-size: .82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      margin-bottom: 24px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 35px;
+      height: 1px;
+      background: var(--accent);
+    }
+
+    h1, h2, h3 {
+      font-family: "Space Grotesk", sans-serif;
+      margin: 0;
+      line-height: 1.05;
+      letter-spacing: -.04em;
+    }
+
+    h1 {
+      max-width: 840px;
+      font-size: clamp(3rem, 7vw, 6.9rem);
+      font-weight: 700;
+    }
+
+    .gradient-text {
+      background: linear-gradient(100deg, #ffffff 5%, #a8f2e8 48%, #91b7ff 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-copy {
+      max-width: 720px;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 1.8vw, 1.22rem);
+      margin: 28px 0 34px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .hero-card {
+      position: relative;
+      border: 1px solid var(--line);
+      background: linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.025));
+      box-shadow: var(--shadow);
+      border-radius: 34px;
+      padding: 26px;
+      overflow: hidden;
+    }
+
+    .hero-card::after {
+      content: "";
+      position: absolute;
+      width: 190px;
+      height: 190px;
+      border-radius: 50%;
+      right: -70px;
+      top: -70px;
+      background: rgba(89,212,199,.14);
+      filter: blur(8px);
+    }
+
+    .profile-mark {
+      aspect-ratio: 1.12 / 1;
+      border-radius: 26px;
+      display: grid;
+      place-items: center;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 65% 32%, rgba(89,212,199,.28), transparent 22%),
+        linear-gradient(145deg, #102742, #0a1728 62%);
+      border: 1px solid rgba(255,255,255,.08);
+    }
+
+    .profile-initials {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(5rem, 10vw, 8rem);
+      line-height: 1;
+      font-weight: 700;
+      letter-spacing: -.08em;
+      color: rgba(255,255,255,.92);
+    }
+
+    .signal {
+      position: absolute;
+      inset: auto 8% 12% 8%;
+      height: 70px;
+      opacity: .8;
+    }
+
+    .signal svg { width: 100%; height: 100%; }
+
+    .availability {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #dce7f4;
+      font-size: .92rem;
+      margin-top: 20px;
+    }
+
+    .status-dot {
+      width: 9px;
+      height: 9px;
+      background: #75e8b3;
+      border-radius: 50%;
+      box-shadow: 0 0 0 6px rgba(117,232,179,.09);
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-top: 44px;
+    }
+
+    .stat {
+      border-top: 1px solid var(--line);
+      padding-top: 18px;
+    }
+
+    .stat strong {
+      display: block;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 1.48rem;
+      letter-spacing: -.03em;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: .86rem;
+    }
+
+    section {
+      padding: 98px 0;
+      scroll-margin-top: 76px;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: .7fr 1.3fr;
+      gap: 46px;
+      align-items: end;
+      margin-bottom: 42px;
+    }
+
+    .section-kicker {
+      color: var(--accent);
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: .78rem;
+      letter-spacing: .15em;
+      margin-bottom: 14px;
+    }
+
+    h2 {
+      font-size: clamp(2.3rem, 5vw, 4.5rem);
+      max-width: 760px;
+    }
+
+    .section-head p {
+      color: var(--muted);
+      max-width: 720px;
+      margin: 0;
+      font-size: 1.06rem;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 18px;
+    }
+
+    .panel {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      border-radius: var(--radius);
+      padding: 28px;
+    }
+
+    .panel h3 {
+      font-size: 1.25rem;
+      margin-bottom: 14px;
+    }
+
+    .panel p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .skills {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .skill {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.035);
+      color: #d9e3ef;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: .83rem;
+      font-weight: 600;
+    }
+
+    .research-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .research-card {
+      min-height: 330px;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 30px;
+      background:
+        linear-gradient(145deg, rgba(255,255,255,.075), rgba(255,255,255,.025));
+      transition: transform .25s ease, border-color .25s ease;
+    }
+
+    .research-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(89,212,199,.34);
+    }
+
+    .card-number {
+      color: var(--accent);
+      font-family: "Space Grotesk", sans-serif;
+      font-size: .9rem;
+      font-weight: 700;
+      margin-bottom: 42px;
+    }
+
+    .research-card h3 {
+      font-size: clamp(1.5rem, 3vw, 2.3rem);
+      max-width: 520px;
+      margin-bottom: 17px;
+    }
+
+    .research-card p {
+      color: var(--muted);
+      margin: 0;
+      max-width: 560px;
+    }
+
+    .card-tags {
+      position: absolute;
+      left: 30px;
+      bottom: 28px;
+      display: flex;
+      gap: 9px;
+      flex-wrap: wrap;
+    }
+
+    .card-tags span {
+      font-size: .75rem;
+      font-weight: 700;
+      color: #b8c7d8;
+      border: 1px solid var(--line);
+      padding: 6px 9px;
+      border-radius: 999px;
+    }
+
+    .highlights {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .highlight {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      border-radius: 24px;
+      padding: 26px;
+    }
+
+    .highlight strong {
+      display: block;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 2.1rem;
+      margin-bottom: 4px;
+      letter-spacing: -.04em;
+    }
+
+    .highlight span { color: var(--muted); }
+
+    .publications {
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      overflow: hidden;
+      background: rgba(255,255,255,.028);
+    }
+
+    .pub-row {
+      display: grid;
+      grid-template-columns: 90px 1fr auto;
+      gap: 24px;
+      align-items: center;
+      padding: 24px 26px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .pub-row:last-child { border-bottom: 0; }
+
+    .pub-year {
+      color: var(--accent);
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 700;
+    }
+
+    .pub-title {
+      font-weight: 700;
+      font-size: 1.02rem;
+    }
+
+    .pub-meta {
+      color: var(--muted);
+      font-size: .88rem;
+      margin-top: 4px;
+    }
+
+    .pub-link {
+      color: #c9d6e5;
+      font-weight: 700;
+      font-size: .86rem;
+    }
+
+    .contact {
+      text-align: center;
+      border: 1px solid var(--line);
+      border-radius: 34px;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(89,212,199,.13), transparent 28rem),
+        rgba(255,255,255,.035);
+      padding: 72px 28px;
+    }
+
+    .contact h2 {
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    .contact p {
+      max-width: 650px;
+      margin: 20px auto 30px;
+      color: var(--muted);
+      font-size: 1.06rem;
+    }
+
+    .socials {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .socials a {
+      border: 1px solid var(--line);
+      padding: 9px 13px;
+      border-radius: 999px;
+      color: #cfdae7;
+      font-size: .88rem;
+      font-weight: 700;
+    }
+
+    footer {
+      padding: 34px 0 46px;
+      color: #8091a5;
+      font-size: .88rem;
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .mobile-menu {
+      display: none;
+      background: none;
+      border: 0;
+      color: var(--text);
+      font-size: 1.4rem;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 900px) {
+      .hero { min-height: auto; }
+      .hero-grid, .section-head, .about-grid { grid-template-columns: 1fr; }
+      .hero-grid { gap: 46px; }
+      .hero-card { max-width: 600px; }
+      .stats { grid-template-columns: repeat(2, 1fr); }
+      .research-grid { grid-template-columns: 1fr; }
+      .highlights { grid-template-columns: 1fr; }
+      .section-head { gap: 20px; }
+      .pub-row { grid-template-columns: 70px 1fr; }
+      .pub-link { grid-column: 2; }
+    }
+
+    @media (max-width: 700px) {
+      .container { width: min(calc(100% - 28px), var(--max)); }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 73px;
+        left: 14px;
+        right: 14px;
+        padding: 18px;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: rgba(7,17,31,.96);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 5px;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: 10px 8px; }
+      .mobile-menu { display: inline-block; }
+      .nav-cta { display: none; }
+      .hero { padding-top: 64px; }
+      .hero-actions { flex-direction: column; align-items: stretch; }
+      .button { width: 100%; }
+      section { padding: 78px 0; }
+      .research-card { min-height: 360px; }
+      .pub-row {
+        grid-template-columns: 1fr;
+        gap: 7px;
+      }
+      .pub-link { grid-column: 1; margin-top: 6px; }
+      .contact { padding: 56px 20px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
+  
+    .pub-row { grid-template-columns: 76px minmax(0,1fr) 70px; }
+    .pub-authors { color:#c5d3e2; margin-top:9px; font-size:.87rem; }
+    .pub-no-link { color:#73869c; }
+    .experience-list { border:1px solid var(--line); border-radius:28px; overflow:hidden; }
+    .experience-item { display:grid; grid-template-columns:240px 1fr; gap:24px; padding:28px; border-bottom:1px solid var(--line); }
+    .experience-item:last-child { border-bottom:0; }
+    .experience-date { color:var(--accent); font-weight:700; font-size:.88rem; }
+    .experience-item h3 { font-size:1.3rem; margin-bottom:6px; }
+    .experience-item p { color:var(--muted); margin:8px 0 0; }
+    .experience-item .place { color:#d6e1ed; font-weight:600; }
+    .recognition-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+    @media(max-width:900px) {.experience-item {grid-template-columns:1fr; gap:8px;} .recognition-grid {grid-template-columns:1fr;} }
+    @media(max-width:700px) {.pub-row {grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+<div class="nav-wrap">
+<nav class="container">
+<a aria-label="Homepage" class="brand" href="#top">
+<span class="brand-dot"></span>
+        Shoaib Ul Hassan
+      </a>
+<div class="nav-links" id="navLinks">
+<a href="#about">About</a>
+<a href="#research">Research</a><a href="#experience">Experience</a>
+<a href="#publications">Publications</a>
+<a href="#contact">Contact</a>
+</div>
+<a class="nav-cta" href="#contact">Let's connect</a>
+<button aria-expanded="false" aria-label="Open navigation" class="mobile-menu" id="menuButton">☰</button>
+</nav>
+</div>
+<main id="top">
+<section class="hero">
+<div class="container hero-grid">
+<div>
+<div class="eyebrow">AI Researcher · Educator · Software Developer</div>
+<h1>Researching intelligent systems. <span class="gradient-text">Building practical solutions.</span></h1>
+<p class="hero-copy">I’m Shoaib Ul Hassan, an AI and machine learning researcher and Graduate Research Fellow at Universiti Teknologi PETRONAS, Malaysia. My work spans deep learning, computer vision, signal processing, intelligent data processing, and applied software development.</p>
+<div class="hero-actions">
+<a class="button button-primary" href="#research">Explore my research <span>↘</span></a>
+<a class="button button-secondary" href="ShoaibUlHassan_CV.pdf" rel="noopener" target="_blank">View CV</a>
+</div>
+
+</div>
+<aside aria-label="Profile card" class="hero-card reveal">
+<div class="profile-mark">
+<div class="profile-initials">SH</div>
+<div aria-hidden="true" class="signal">
+<svg preserveaspectratio="none" viewbox="0 0 600 100">
+<path d="M0,52 C30,52 33,50 50,52 S75,54 90,50 S110,14 126,54 S147,84 165,52 S192,50 210,52 S236,55 255,49 S279,23 294,53 S317,75 335,52 S365,48 384,52 S410,60 430,50 S454,8 471,54 S492,87 511,51 S538,51 600,52" fill="none" stroke="rgba(89,212,199,.9)" stroke-width="2.4"></path>
+</svg>
+</div>
+</div>
+<div class="availability"><span class="status-dot"></span> Open to PhD opportunities &amp; research collaborations</div>
+</aside>
+</div>
+</section>
+<section id="about">
+<div class="container">
+<div class="section-head reveal">
+<div>
+<div class="section-kicker">About</div>
+<h2>Research, teaching, and technology in practice.</h2>
+</div>
+<p>I combine academic research with hands-on teaching and software development, with an interest in creating dependable AI tools for real-world challenges.</p>
+</div>
+<div class="about-grid">
+<article class="panel reveal">
+<h3>Academic background</h3>
+<p>MSc in Information Technology, Universiti Teknologi PETRONAS (2024–expected November 2026); BS in Software Engineering, Iqra University, Karachi (2019–2023). My research interests include AI, computer vision, deep learning, signal and image processing, anomaly detection, and trustworthy AI.</p>
+</article>
+<article class="panel reveal">
+<h3>Technical toolkit</h3>
+<p>Experienced in end-to-end machine learning workflows, programming, applied research, teaching and scientific communication.</p>
+<div class="skills"><span class="skill">Python</span><span class="skill">PyTorch</span><span class="skill">TensorFlow</span><span class="skill">Keras</span><span class="skill">Scikit-learn</span><span class="skill">OpenCV</span><span class="skill">NumPy · Pandas · SciPy</span><span class="skill">CNNs</span><span class="skill">Computer Vision</span><span class="skill">Signal Processing</span><span class="skill">Self-supervised Learning</span><span class="skill">Explainable AI</span><span class="skill">Java · Kotlin · C/C++</span><span class="skill">SQL</span><span class="skill">Git · CUDA · LaTeX</span></div>
+</article>
+</div>
+</div>
+</section>
+<section id="research">
+<div class="container">
+<div class="section-head reveal">
+<div>
+<div class="section-kicker">Selected projects</div>
+<h2>From machine learning research to deployed applications.</h2>
+</div>
+<p>Research and engineering projects spanning intelligent sensing, natural-language generation, and institutional analytics.</p>
+</div>
+<div class="research-grid"><article class="research-card reveal"><div class="card-number">01 / AI &amp; Signal Processing</div><h3>Intelligent data processing for sensing applications</h3><p>Research on data preprocessing, classification and signal interpretation, including Distributed Acoustic Sensing (DAS) for subsurface CO₂ monitoring.</p><div class="card-tags"><span>Deep Learning</span><span>Signal Processing</span><span>Computer Vision</span></div></article><article class="research-card reveal"><div class="card-number">02 / Natural Language Processing</div><h3>WRITAN — Urdu AI writing assistant</h3><p>Developed a GPT-2-based Urdu-language writing assistant using an Urdu news corpus, as a BS Software Engineering final-year project.</p><div class="card-tags"><span>GPT-2</span><span>Natural Language Processing</span><span>Full Stack</span></div></article><article class="research-card reveal"><div class="card-number">03 / Enterprise Dashboard</div><h3>UTP Continuing Professional Development system</h3><p>Built Oracle APEX dashboards to help Universiti Teknologi PETRONAS academic staff manage, monitor and organize Continuing Professional Development points.</p><div class="card-tags"><span>Oracle APEX</span><span>Analytics</span><span>Dashboards</span></div></article></div>
+</div>
+</section>
+
+<section id="experience"><div class="container"><div class="section-head reveal"><div><div class="section-kicker">Experience</div><h2>Researcher and educator.</h2></div><p>Academic research, undergraduate teaching, student mentorship, and practical software instruction across two universities.</p></div><div class="experience-list reveal"><article class="experience-item"><span class="experience-date">2024 — Present</span><div><h3>Graduate Research Fellow</h3><p class="place">Universiti Teknologi PETRONAS · Department of Computing · Malaysia</p><p>AI and machine learning research; deep-learning model development; paper writing; lectures, labs and mentoring in AI &amp; Business Intelligence, Information Security and Cyber Security.</p></div></article><article class="experience-item"><span class="experience-date">2024 — Present · Study leave</span><div><h3>Lab Instructor</h3><p class="place">Iqra University · Department of Computer Science · Karachi, Pakistan</p><p>Teaching and student guidance in object-oriented programming, Python, Java, C/C++, SQL, project development and technical communication.</p></div></article></div></div></section><section id="recognition"><div class="container"><div class="section-head reveal"><div><div class="section-kicker">Recognition &amp; professional activities</div><h2>Beyond the lab.</h2></div><p>Recognition, research participation, funding, and academic community engagement.</p></div><div class="recognition-grid reveal"><article class="panel"><h3>Honours &amp; awards</h3><p>Focused Recognition by PETRONAS / Universiti Teknologi PETRONAS (2025)<br/>Outstanding Research Poster Award, UTP Annual Postgraduate Conference (2025)</p></article><article class="panel"><h3>Fellowship &amp; service</h3><p>Graduate Research Fellowship supported by Universiti Teknologi PETRONAS and TotalEnergies EP Malaysia. Active in student mentoring, teaching and community volunteering.</p></article><article class="panel"><h3>Conferences</h3><p>ESTCON 2026, ICSECS 2025, ICON-AI 2025, SENNANO 2025, AiDAS 2025, and ICTeD 2024.</p></article></div></div></section><section id="publications">
+<div class="container">
+<div class="section-head reveal">
+<div>
+<div class="section-kicker">Publications</div>
+<h2>Publications &amp; scholarly contributions.</h2>
+</div>
+<p>All seven publications currently listed in my academic CV, spanning distributed sensing, machine learning, optimization, blockchain, and education.</p>
+</div>
+<div class="publications reveal"><article class="pub-row"><div class="pub-year">2026</div><div><div class="pub-title">Efficient Big Data Compression for Distributed Acoustic Sensing via Gradient Quantization</div><div class="pub-authors">Shoaib Ul Hassan, Noureen Talpur, Shuhaida Mohamed Shuhidan, Mohd Hilmi Hassan, Shahneela Pitafi, Kazim Raza Talpur</div><div class="pub-meta">Mathematical Sciences and Informatics Journal, 7(1), 146–156</div></div><span class="pub-link pub-no-link">In CV</span></article><article class="pub-row"><div class="pub-year">2026</div><div><div class="pub-title">Enhancing Transparency and Efficiency: Blockchain-Based Supply Chain Management and Automated Trade Finance in Oil and Gas</div><div class="pub-authors">Md Tahmid Ashraf Chowdhury, Fasee Ullah, Mujeeb Ur Rehman Shaikh, Shamsu Abdullahi, Shoaib Ul Hassan, Md Mohibul Alam</div><div class="pub-meta">Book chapter · DOI: 10.4018/979-8-3373-5457-6.ch003</div></div><a class="pub-link" href="https://doi.org/10.4018/979-8-3373-5457-6.ch003" rel="noopener" target="_blank">DOI ↗</a></article><article class="pub-row"><div class="pub-year">2026</div><div><div class="pub-title">Monitoring Oil and Gas Using Edge Intelligence and IoT for Remote Field Operations</div><div class="pub-authors">Shoaib Ul Hassan, Noureen Talpur, Mohd Hilmi Hasan, Mohd Hafizul Afifi Abdullah, et al.</div><div class="pub-meta">Book chapter · DOI: 10.4018/979-8-3373-5457-6.ch008</div></div><a class="pub-link" href="https://doi.org/10.4018/979-8-3373-5457-6.ch008" rel="noopener" target="_blank">DOI ↗</a></article><article class="pub-row"><div class="pub-year">2025</div><div><div class="pub-title">Boosting Classification Accuracy Using an Efficient Stochastic Optimization Technique for Feature Selection in High-Dimensional Data</div><div class="pub-authors">Noureen Talpur, Shoaib Ul Hassan, Mohd Hafizul Afifi Abdullah, et al.</div><div class="pub-meta">Swarm and Evolutionary Computation, 97, 102025 · Elsevier</div></div><span class="pub-link pub-no-link">In CV</span></article><article class="pub-row"><div class="pub-year">2025</div><div><div class="pub-title">Data Quality Assessment of Distributed Acoustic Sensing for CO₂ Leak Detection Using Machine Learning</div><div class="pub-authors">Shoaib Ul Hassan, Noureen Talpur, Mohd Hilmi Hasan, Mohd Hafizul Afifi Abdullah, M. T. A. Chowdhury, A. Khan</div><div class="pub-meta">2025 6th International Conference on Artificial Intelligence and Data Sciences (AiDAS), pp. 391–396 · IEEE</div></div><span class="pub-link pub-no-link">In CV</span></article><article class="pub-row"><div class="pub-year">2025</div><div><div class="pub-title">A Blockchain-Based Conceptual Framework for Real-Time Collision Prevention in Autonomous Vehicles</div><div class="pub-authors">Fasee Ullah, Md Tahmid Ashraf Chowdhury, H. Alhussian, Shoaib Ul Hassan, N. Haque</div><div class="pub-meta">2025 IEEE 9th International Conference on Software Engineering &amp; Computer Systems (ICSECS), pp. 96–101</div></div><span class="pub-link pub-no-link">In CV</span></article><article class="pub-row"><div class="pub-year">2024</div><div><div class="pub-title">The Gamification Effect of Simplifying Complex Mathematics and Statistics Concepts: A Case Study of Online Game-Based Quiz Tools</div><div class="pub-authors">Noureen Talpur, N. Aziz, S. Khatoon, Mohd Hafizul Afifi Abdullah, Shoaib Ul Hassan, A. O. Balogun</div><div class="pub-meta">2024 International Conference on TVET Excellence &amp; Development (ICTeD), pp. 130–135 · IEEE</div></div><span class="pub-link pub-no-link">In CV</span></article></div>
+</div>
+</section>
+<section id="contact">
+<div class="container">
+<div class="contact reveal">
+<div class="section-kicker">Contact</div>
+<h2>Let’s collaborate on thoughtful, useful research.</h2>
+<p>I welcome PhD opportunities, research collaborations, and conversations around AI, machine learning, computing education, and intelligent software systems.</p>
+<div class="hero-actions" style="justify-content:center">
+<a class="button button-primary" href="mailto:shoaibulhassaan@gmail.com">Email me</a>
+<a class="button button-secondary" href="YOUR_LINKEDIN_LINK" rel="noopener" target="_blank">LinkedIn</a>
+</div>
+<div class="socials">
+<a href="YOUR_GITHUB_LINK" rel="noopener" target="_blank">GitHub</a>
+<a href="YOUR_GOOGLE_SCHOLAR_LINK" rel="noopener" target="_blank">Google Scholar</a>
+<a href="YOUR_ORCID_LINK" rel="noopener" target="_blank">ORCID</a>
+<a href="YOUR_RESEARCHGATE_LINK" rel="noopener" target="_blank">ResearchGate</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<div class="container footer-row">
+<span>© <span id="year"></span> Shoaib Ul Hassan.</span>
+<span>Built for GitHub Pages · HTML + CSS + JavaScript</span>
+</div>
+</footer>
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const button = document.getElementById("menuButton");
+    const nav = document.getElementById("navLinks");
+
+    button.addEventListener("click", () => {
+      const isOpen = nav.classList.toggle("open");
+      button.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      button.textContent = isOpen ? "✕" : "☰";
+    });
+
+    nav.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        nav.classList.remove("open");
+        button.setAttribute("aria-expanded", "false");
+        button.textContent = "☰";
+      });
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add("visible");
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
